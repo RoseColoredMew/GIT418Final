@@ -1,0 +1,40 @@
+{
+  "areas": [
+    {
+      "city": "Gilbert",
+      "zipCodes": "85204, 85233-85299",
+      "latitude": 33.3528,
+      "longitude": -111.7890
+    },
+    {
+      "city": "Mesa",
+      "zipCodes": "85201-85215",
+      "latitude": 33.4152,
+      "longitude": -111.8315
+    },
+    {
+      "city": "Queen Creek",
+      "zipCodes": "85140, 85142, 85212",
+      "latitude": 33.2488,
+      "longitude": -111.6343
+    },
+    {
+      "city": "Apache Junction",
+      "zipCodes": "85117, 85119-85120",
+      "latitude": 33.4150,
+      "longitude": -111.5496
+    },
+    {
+      "city": "Ahwatukee",
+      "zipCodes": "85044-85048",
+      "latitude": 33.3190,
+      "longitude": -112.0291
+    },
+    {
+      "city": "Tempe",
+      "zipCodes": "85281-85287",
+      "latitude": 33.4255,
+      "longitude": -111.9400
+    }
+  ]
+}

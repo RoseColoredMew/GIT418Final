@@ -1,0 +1,276 @@
+<!--
+ * Swim n Chill - index HTML
+ * Author: Abraham Mendez
+ * Date: December 2025
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Swim n Chill - Pool Service and Repair. Your trusted partner for professional pool cleaning and repairs. Serving multiple locations with expert care.">
+    <title>Swim n Chill | Pool Service and Repair</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/themes.css">
+    
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
+    <!-- Leaflet CSS (Interactive map) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- JavaScript Files - loaded with defer -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+
+    <!-- Leaflet JS (Interactive map) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="js/main.min.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home" class="site-logo-link" aria-label="Go to home">
+                    <img class="site-logo"
+                         src="assets/images/logo/1x/horizontal_no_subtext_logo.png"
+                         srcset="assets/images/logo/1x/horizontal_no_subtext_logo.png 1x,
+                                 assets/images/logo/2x/horizontal_no_subtext_logo@2x.png 2x,
+                                 assets/images/logo/3x/horizontal_no_subtext_logo@3x.png 3x"
+                         alt="Swim n Chill">
+                </a>
+                <h1 class="visually-hidden">Swim n Chill</h1>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#service-areas">Service Areas</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
+                    <!-- Moon (dark mode icon) -->
+                    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+
+                    <!-- Sun (light mode icon) - hidden by default -->
+                    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2M12 19v2M5.22 5.22l1.42 1.42M17.36 17.36l1.42 1.42M3 12h2M19 12h2M5.22 18.78l1.42-1.42M17.36 6.64l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z"/>
+                    </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Professional Pool Care You Can Trust</h2>
+            <p>Reliable pool cleaning and repair — book a free inspection today.</p>
+            <a href="#contact" class="cta-button">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Services Section with jQuery UI Tabs -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div id="services-tabs">
+                <ul>
+                    <li><a href="#cleaning">Cleaning & Maintenance</a></li>
+                    <li><a href="#repairs">Repairs & Equipment</a></li>
+                    <li><a href="#other-services">Other Services</a></li>
+                </ul>
+                <div id="cleaning">
+                    <h3>Cleaning & Weekly Maintenance</h3>
+                    <p>Keep your pool sparkling clean with our professional maintenance services. We offer weekly and one-time visits, chemical balancing, and restorative rinses to keep your pool swim-ready.</p>
+                    <ul class="service-list">
+                        <li>Weekly service and one-time visits</li>
+                        <li>Chemical testing &amp; balancing (water testing)</li>
+                        <li>Filter cleaning and quarterly maintenance</li>
+                        <li>Acid / chlorine rinses and stain removal</li>
+                        <li>Green pool recovery and algae treatment</li>
+                        <li>Spa &amp; pool drain service</li>
+                    </ul>
+                </div>
+                <div id="repairs">
+                    <h3>Repairs & Equipment</h3>
+                    <p>From minor fixes to major equipment upgrades, our experienced technicians can handle all your pool repair needs quickly and efficiently.</p>
+                    <ul class="service-list">
+                        <li>Equipment installation, upgrades &amp; replacement</li>
+                        <li>Inspections, diagnostics, and leak detection</li>
+                        <li>Light installation and repair</li>
+                        <li>Heater repair and tuning</li>
+                        <li>Automation, control setup &amp; equipment troubleshooting</li>
+                    </ul>
+                </div>
+                <div id="other-services">
+                    <h3>Other Services</h3>
+                    <p>Additional services to keep your pool safe, efficient, and swim-ready.</p>
+                    <ul class="service-list">
+                        <li>Seasonal opening &amp; closing</li>
+                        <li>Acid washing and major stain restoration</li>
+                        <li>Minor structural repairs</li>
+                        <li>Preventive maintenance consultations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section (AJAX Loaded) -->
+    <section id="service-areas" class="service-areas">
+        <div class="container">
+            <h2>Areas We Serve</h2>
+            <p>Proudly serving the following communities:</p>
+            <div id="areas-container" class="areas-grid">
+                <p class="loading">Loading service areas...</p>
+            </div>
+            <!-- Interactive map of service areas (Leaflet) -->
+            <div id="areas-map" role="region" aria-label="Service areas map"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section with Slick Carousel -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Our Work</h2>
+            <div class="gallery-carousel">
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/filter_dirty2.jpg" alt="Filter before cleaning">
+                    <p>Filter before cleaning</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/filter_clean2.jpg" alt="Filter after cleaning">
+                    <p>Filter after cleaning</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/pool_before.jpg" alt="Before green to blue treatment">
+                    <p>Before green to blue treatment</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/pool_after.jpg" alt="After green to blue treatment">
+                    <p>After green to blue treatment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" autocomplete="off" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        Send Message
+                        <span class="button-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </span>
+                    </button>
+                </form>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-info-list">
+                        <li>
+                            <span class="contact-info-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                                </svg>
+                            </span>
+                            <div>
+                                <p class="contact-info-label">Phone</p>
+                                <p class="contact-info-value">(602) 599-1767</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-info-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 3.75H6.912a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859M12 3v8.25m0 0-3-3m3 3 3-3" />
+                                </svg>
+                            </span>
+                            <div>
+                                <p class="contact-info-label">Email</p>
+                                <p class="contact-info-value">swimandchill@gmail.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-info-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 3.75H6.912a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859M12 3v8.25m0 0-3-3m3 3 3-3" />
+                                </svg>
+                            </span>
+                            <div>
+                                <p class="contact-info-label">Service Hours</p>
+                                <p class="contact-info-value">Monday - Friday: 8am - 6pm<br>Saturday: 9am - 4pm<br>Sunday: Closed</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="returning-visitor-message"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <img class="footer-logo"
+                         src="assets/images/logo/logo.svg"
+                         alt="Swim n Chill — Pool Service and Repair">
+                    <p>Your trusted pool service professionals</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#service-areas">Service Areas</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <!-- <a href="#" aria-label="Facebook">Facebook</a> -->
+                        <a href="https://www.instagram.com/swimnchill/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Swim n Chill. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

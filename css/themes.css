@@ -1,0 +1,202 @@
+/*
+ * Swim n Chill - Dark Theme CSS
+ * Author: Abraham Mendez
+ * Date: December 2025
+ */
+
+/* Dark Theme Styles */
+
+body.dark-theme {
+    --primary-color: #f4a135; /* sunset orange */
+    --secondary-color: #ef6c63;
+    --accent-color: #c2517b;
+    --highlight-color: #ffe6a4;
+    --dark-color: #22122f;
+    --surface-color: #2d1b3c;
+    --muted-surface: #3a224e;
+    --light-color: #24142f;
+    --text-dark: #fffaf1;
+    --text-light: #f1cddd;
+    --border-color: rgba(255, 255, 255, 0.16);
+    --focus-ring: rgba(244, 161, 53, 0.4);
+    --card-surface: rgba(38, 22, 53, 0.95);
+    --card-border: rgba(255, 255, 255, 0.14);
+    --card-shadow: 0 25px 50px rgba(5, 0, 13, 0.6);
+    --icon-surface: rgba(244, 161, 53, 0.2);
+    color: var(--text-dark);
+    background-color: var(--light-color);
+}
+
+body.dark-theme #main-header {
+    background: linear-gradient(120deg, #f4a135, #f7c963);
+    box-shadow: 0 6px 25px rgba(15, 9, 3, 0.35);
+}
+
+body.dark-theme #main-nav a {
+    color: #2f1400;
+}
+
+body.dark-theme #main-nav a:hover {
+    color: var(--accent-color);
+}
+
+body.dark-theme #theme-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+body.dark-theme #theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.35);
+    color: var(--dark-color);
+}
+
+body.dark-theme .services,
+body.dark-theme .service-areas,
+body.dark-theme .gallery,
+body.dark-theme .contact {
+    background: radial-gradient(circle at 15% 15%, rgba(244, 161, 53, 0.1), transparent 45%),
+        radial-gradient(circle at 85% 10%, rgba(194, 81, 123, 0.15), transparent 40%),
+        var(--surface-color);
+    color: var(--text-dark);
+}
+
+body.dark-theme .services h2,
+body.dark-theme .service-areas h2,
+body.dark-theme .gallery h2,
+body.dark-theme .contact h2,
+body.dark-theme #service-areas h2 {
+    color: var(--text-dark);
+}
+
+body.dark-theme .services p,
+body.dark-theme .service-areas > .container > p,
+body.dark-theme .gallery p,
+body.dark-theme .contact p {
+    color: var(--text-light);
+}
+
+body.dark-theme #services-tabs {
+    background: radial-gradient(circle at 35% -20%, rgba(244, 161, 53, 0.25), transparent 55%),
+        radial-gradient(circle at 85% 0%, rgba(194, 81, 123, 0.2), transparent 50%),
+        rgba(18, 10, 28, 0.95);
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.65);
+}
+
+body.dark-theme #services-tabs > ul {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-theme #services-tabs .ui-tabs-nav .ui-tabs-anchor {
+    background: rgba(255, 255, 255, 0.92);
+    color: #2c1400;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-theme #services-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+body.dark-theme #services-tabs .ui-tabs-nav .ui-tabs-anchor:hover {
+    background: linear-gradient(120deg, var(--accent-color), var(--secondary-color));
+    color: #fff;
+}
+
+body.dark-theme #services-tabs div {
+    background: rgba(13, 7, 22, 0.9);
+}
+
+body.dark-theme #services-tabs .ui-tabs-panel {
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+}
+
+body.dark-theme .service-list li {
+    color: var(--text-light);
+}
+
+body.dark-theme .service-list li::before {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18);
+}
+
+body.dark-theme .areas-grid {
+    background: none;
+}
+
+body.dark-theme .area-card {
+    background: rgba(17, 10, 25, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text-light);
+}
+
+body.dark-theme .area-card h3 {
+    color: var(--highlight-color);
+}
+
+body.dark-theme .gallery-item img {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .gallery-item p {
+    color: var(--text-light);
+}
+
+body.dark-theme .slick-dots li button:before {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+body.dark-theme .slick-dots li.slick-active button:before {
+    color: var(--highlight-color);
+}
+
+body.dark-theme .contact {
+    background: radial-gradient(circle at top, rgba(244, 161, 53, 0.12), transparent 45%),
+        radial-gradient(circle at 20% 20%, rgba(194, 81, 123, 0.18), transparent 40%),
+        var(--surface-color);
+}
+
+body.dark-theme #contact-form,
+body.dark-theme .contact-info {
+    background: var(--card-surface);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
+}
+
+body.dark-theme #contact-form label {
+    color: rgba(255, 250, 241, 0.7);
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+    background-color: rgba(15, 9, 23, 0.85);
+    border: 1px solid rgba(244, 161, 53, 0.25);
+    color: var(--text-dark);
+}
+
+body.dark-theme .form-group input::placeholder,
+body.dark-theme .form-group textarea::placeholder {
+    color: rgba(255, 250, 241, 0.55);
+}
+
+body.dark-theme .contact-info-label {
+    color: var(--text-dark);
+}
+
+body.dark-theme .contact-info-value {
+    color: rgba(255, 250, 241, 0.85);
+}
+
+body.dark-theme .contact-info-icon {
+    background: var(--icon-surface);
+    color: var(--highlight-color);
+}
+
+body.dark-theme #main-footer {
+    background: #160d21;
+}
+
+body.dark-theme .footer-section a {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+body.dark-theme .footer-section a:hover {
+    color: var(--highlight-color);
+}
