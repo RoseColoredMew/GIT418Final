@@ -17,7 +17,6 @@ $(document).ready(function() {
     initServiceAreasMap();
     initContactForm();
     checkReturningVisitor();
-    initSmoothScroll();
     
 });
 
@@ -25,10 +24,19 @@ $(document).ready(function() {
  * Initialize jQuery UI Tabs for Services Section
  */
 function initServiceTabs() {
-    $("#services-tabs").tabs({
+    const $tabs = $("#services-tabs");
+
+    $tabs.tabs({
         active: 0,
         collapsible: false,
         heightStyle: "content"
+    });
+
+    // Stop default anchor jumps and activate tabs manually
+    $tabs.on('click', '.ui-tabs-nav a', function(e) {
+        e.preventDefault();
+        const index = $(this).parent().index();
+        $tabs.tabs('option', 'active', index);
     });
 }
 
@@ -322,18 +330,3 @@ function displayReturningVisitorMessage(name) {
     messageDiv.addClass('show');
 }
 
-/**
- * Initialize smooth scrolling for navigation links
- */
-function initSmoothScroll() {
-    $('a[href^="#"]').on('click', function(e) {
-        const target = $(this.getAttribute('href'));
-        
-        if (target.length) {
-            e.preventDefault();
-            $('html, body').stop().animate({
-                scrollTop: target.offset().top - 80
-            }, 800);
-        }
-    });
-}
